@@ -1,0 +1,20 @@
+{% if messages %}
+  {% for message in messages %}
+    {% if message.tags == 'success'%}
+    <div class="container m-4">
+      <div class="col-5"></div>
+      <div class="col">
+        <div class="alert alert-success align-content-center" style="color: rgba(255, 255, 255, 0.4); background-color: rgba(24, 64, 8);" role="alert">
+          <h4 class="alert-heading">Gracias por enviar tu correo</h4>
+          <p class="h5">En caso de no tener una respuesta puede comunicarse con los siguientes numeros: </p>
+            <br>
+          <strong class="d-block pb-2 pl-5">- 098 671 033 (Whatsapp)</strong>
+          <strong class="d-block pl-5">- 094 706 503</strong> 
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+    {% endif %}
+
+  {% endfor %}
+{% endif %}

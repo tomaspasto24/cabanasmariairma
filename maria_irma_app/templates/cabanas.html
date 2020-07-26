@@ -1,0 +1,61 @@
+{% extends "proyecto_web_app/plantilla_padre.html" %}
+{% load static %}
+
+{% block title %}
+Cabañas
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+
+    <h1 class="site-heading text-center d-none d-lg-block">
+        <span class="display-3">Cabañas</span>
+    </h1>
+
+    <div class="row">
+    {% for cabana in cabanas %}
+        <div class="col-6">
+            <div class="card mt-4" style="width: auto;">
+                <img class="card-img-top" src=" {{cabana.image_main.url}} ">
+                <div class="card-body">
+                <h5 class="card-title">{{cabana.ubicacion}}</h5>
+                <p class="card-text">{{cabana.texto}}</p>
+                <a href="{% url 'detail_cabana' cabana.slug %}" class="btn btn-primary">Ver fotos</a>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% if cabanas.has_other_pages %}
+<div class="container pt-5 pb-3">
+  <ul class="pagination">
+    {% if cabanas.has_previous %}
+      <li><a href="?page={{ cabanas.previous_page_number }}">
+        <button type="button" class="btn btn-primary ml-2"> < </button>
+      </a></li>
+    {% else %}
+      <li class="disabled"><span></span></li>
+    {% endif %}
+    {% for i in cabanas.paginator.page_range %}
+      {% if cabanas.number == i %}
+        <li class="active"><span><button type="button" class="btn btn-primary ml-2" style="color: rgba(255, 255, 255, 0.3);">{{i}}</button> <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">
+            <button type="button" class="btn btn-primary ml-2">{{i}}</button>
+        </a></li>
+      {% endif %}
+    {% endfor %}
+    {% if cabanas.has_next %}
+      <li><a href="?page={{ cabanas.next_page_number }}">
+        <button type="button" class="btn btn-primary ml-2"> > </button>
+      </a></li>
+    {% else %}
+      <li class="disabled"><span></span></li>
+    {% endif %}
+  </ul>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'proyecto_web_app/plantilla_padre.html'%}
+
+{% block title %}
+Maria Irma - Contacto
+{% endblock %}
+
+{% block content %}
+
+
+    {% if forms.errors %}
+        <p>Por favor volver a introducir, ha ocurrido un error</p>
+    {% endif %}
+
+    <h1 class="site-heading text-center d-none d-lg-block">
+      <span class="site-heading-lower">Contacto</span>
+    </h1>
+
+    <div class="container pb-5 pt-5">
+      <div class="row">
+        
+      
+      <div class="col-3"></div>
+          <div class="col-6 card">
+            <h1 class="h1 text-center pb-3">Vía Email</h4>
+            <form method="POST"> {% csrf_token %}
+                <label for="mail" class="h3">Email</label>
+                <input type="email" name="mail" class="form-control">
+
+                <label for="asunto" class="h3 pt-3">Asunto</label>
+                <input type="text" name="asunto" class="form-control">
+
+                <label for="mensaje" class="h3 pt-3">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="56" rows="8" class="form-control"></textarea>
+
+                <button type="submit" value="Enviar" class="btn btn-primary mt-3 d-block">Enviar</button>
+            </form>
+          </div>
+      </div>
+      <div class="col-3"></div>
+      </div>
+    </div>
+
+
+      <div class="container pt-5 p-4">
+        <div class="row">
+          <div class="col-3">   
+            <a href="https://api.whatsapp.com/send?phone=59898671033" style="color:#212529" class="link">
+              <span class="fab fa-whatsapp fa-4x ml-4"></span>
+              <span class="px-2 d-sm-block d-md-inline"><strong> Enviar mensaje </strong></span>
+            </a>
+          </div>          
+
+          <div class="col-3">
+            <a href="https://es-la.facebook.com/Caba%C3%B1as-Maria-Irma-1741746759401646/" style="color: #212529;" class="link">
+              <span class="fab fa-facebook fa-4x" ></span>
+              <span class="d-sm-block d-md-inline"><strong>Pagina de Facebook</strong></span>
+            </a>
+          </div>
+
+        <div class="col-3">
+            <span class="fas fa-phone fa-4x ml-4 d-inline" style="color: #212529;" class="link"></span>
+            <span class="d-sm-block d-md-inline"><strong>42 22 50 45</strong></span>
+        </div>
+
+
+          <div class="col-3">
+            <a href="https://www.google.com/maps/dir//Av+Gral+Leandro+G%C3%B3mez,+20005+Maldonado,+Departamento+de+Maldonado/@-34.902739,-54.999056,19z/data=!4m9!4m8!1m0!1m5!1m1!1s0x957510f3e12f8559:0x243974366af4e6cb!2m2!1d-54.9886345!2d-34.8996542!3e0?hl=en" style="color: #212529;" class="link">
+              <span class="fas fa-map-marker-alt fa-4x"></span>
+              <span class="d-sm-block d-md-inline"> <strong>Dirección (Google Maps)</strong> </span>
+            </a>
+          </div>
+
+      </div>
+      </div>
+    </div>
+
+
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,62 @@
+{% extends 'proyecto_web_app/plantilla_padre.html'%}
+
+{% block title%}
+{{plano.ubicacion}} 
+{% endblock%}
+
+{% block content %}
+<h1 class="site-heading text-center text-green d-none d-lg-block">
+    <span class="site-heading-lower">{{plano.ubicacion}}</span>
+</h1> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <p>
+                {{plano.texto}}
+            </p>
+        </div>
+        <div class="col-9 pl-5">
+            <img src="{{ plano.image_main.url }} " alt="..." class="img-thumbnail">
+        </div>
+    </div>
+
+    <div class="row pt-5">
+        {% if plano.image_1 %}
+        <div class="col">
+            <img src="{{ plano.image_1.url }} " alt="..." class="img-thumbnail">
+        </div>
+        {% endif %}
+        {% if plano.image_2 %}
+        <div class="col">
+            <img src="{{ plano.image_2.url }} " alt="..." class="img-thumbnail">
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row pt-5">
+        {% if plano.image_3 %}
+        <div class="col">
+            <img src="{{plano.image_3.url}}" class="img-fluid img-thumbnail" alt="img-thumbnail">
+        </div>
+        {% endif %}
+        {% if plano.image_4 %}
+        <div class="col">
+            <img src="{{plano.image_4.url}}" class="img-fluid img-thumbnail" alt="img-thumbnail">
+        </div>
+        {% endif %}
+    </div>
+
+    {% if plano.image_5 %}
+    <div class="row pt-5">
+        <div class="col-3">
+
+        </div>
+        <div class="col-9">
+            <img src="{{ plano.image_5.url }} " class="align-content-center img-fluid img-thumbnail ">
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+

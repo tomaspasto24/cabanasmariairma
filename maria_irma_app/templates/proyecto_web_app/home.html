@@ -1,0 +1,90 @@
+{% extends "proyecto_web_app/plantilla_padre.html" %}
+{% load static %}
+{% block title %}
+Maria Irma - Principal
+{% endblock%}
+
+{% block content %}
+ <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'proyecto_web_app/img/principal.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">ipsum</span>
+            <span class="section-heading-lower">assumenda itaque nulla</span>
+          </h2>
+          <p class="mb-3">
+            imilique ipsum repudiandae tenetur assumenda itaque nulla cupiditate repellendus dolor sed laboriosam.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Carousel -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="intro">
+        <div class="col-xl-9 mx-auto">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner rounded">
+                  <div class="carousel-item active">
+                    <img src="{% static 'proyecto_web_app/img/principal.jpg'%}" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'proyecto_web_app/img/principal.jpg'%}" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'proyecto_web_app/img/principal.jpg'%}" class="d-block w-100">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+             </div>
+             </div>
+      </div>
+
+
+  
+    <!-- Message -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mx-3">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">ipsum</span>
+                <span class="section-heading-lower">ipsum</span>
+              </h2>
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit velit, rem voluptas esse debitis quisquam expedita dolorem voluptatem quasi. Officiis aliquid esse molestiae iure minima doloremque consequuntur ipsam explicabo dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt, omnis accusantium rem tenetur quasi quam et facilis fugiat animi iure ipsa ipsam quas voluptates. Necessitatibus natus nemo reprehenderit 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime libero ducimus quas deleniti nam cupiditate, quidem quos fuga corporis, repellat, voluptatum rem accusantium ratione. Ipsum laboriosam corrupti suscipit! Voluptates, commodi!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque provident minima qui ea, doloribus architecto sunt deserunt fuga accusantium possimus, eius alias iste optio explicabo beatae hic incidunt excepturi modi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatem quia, non vitae fugit est ut tempore molestiae veritatis optio possimus ipsam ad obcaecati soluta dolores vel ducimus, dignissimos eligendi.
+                Lorem ipsum dolor, sit amet loreconsectetur adipisicing elit. Nihil atque praesentium fuga inventore soluta officiis dolore molestias optio, architecto in eaque veniam et libero id quas quod enim sed natus?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+
+{% endblock %}

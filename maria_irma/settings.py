@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'maria_irma.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'maria_irma',
-        'USER': 'postgres',
-        'PASSWORD': '42225045tomas',
-        'HOST': 'localhost',
-        'DATABASE_PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
